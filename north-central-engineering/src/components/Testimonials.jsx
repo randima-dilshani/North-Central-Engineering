@@ -16,7 +16,7 @@ export default function Testimonials() {
       name: "Dilini Fernando",
       role: "Operations Director",
       company: "City Hospital",
-      image: "/pimage9.png",
+      image: "/image9.png",
       text: "We needed a comprehensive fire safety solution for our hospital. NCE designed and installed a system that meets all regulatory requirements. Highly professional service.",
       rating: 5,
     },
@@ -24,7 +24,7 @@ export default function Testimonials() {
       name: "Rajith Silva",
       role: "Property Manager",
       company: "Colombo Towers",
-      image: "/pimage8.png",
+      image: "/image8.png",
       text: "We've been using NCE for all our fire alarm and CCTV needs for 5 years. Their maintenance service is prompt and reliable. Best fire safety company in Sri Lanka!",
       rating: 5,
     },
@@ -80,7 +80,7 @@ export default function Testimonials() {
         <div
           className="testimonials-bg"
           style={{
-            backgroundImage: `url('/engineer-technician-fire-alarm-panel-professional.jpg')`,
+            backgroundImage: `url('/image11.png')`,
           }}
         ></div>
         <div className="testimonials-overlay"></div>

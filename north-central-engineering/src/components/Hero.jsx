@@ -1,4 +1,3 @@
-
 import Navbar from "../components/Navbar";
 import About from "../components/About";
 import EmergencyBanner from "../components/EmergencyBanner";
@@ -6,6 +5,8 @@ import WhyChooseUs from "../components/WhyChooseUs";
 import Services from "../components/Services";
 import Stats from "../components/Stats";
 import Testimonials from "../components/Testimonials";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 export default function Hero() {
 
@@ -23,6 +24,7 @@ export default function Hero() {
       <div className="hero-overlay"></div>
       <div className="container hero-content">
         <div className="hero-text">
+          
           <span className="hero-subtitle">Fire Safety Solutions Provider</span>
           <h1 className="hero-title">
             Expert Fire Alarm
@@ -60,6 +62,7 @@ export default function Hero() {
             </button>
           </div>
         </div>
+        
       </div>
     </section>
     <About />
@@ -68,6 +71,8 @@ export default function Hero() {
     <Services />
     <Stats />
     <Testimonials />
+    <Contact />
+    <Footer />
     </>
   )
 }

@@ -6,34 +6,25 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="top-bar">
-        <div className="container top-bar-content">
-          <div className="top-bar-left">
-            <span>📍 North Central Province, Sri Lanka</span>
-            <span>📞 +94 77 123 4567</span>
-          </div>
-          <div className="top-bar-right">
-            <span>🕐 24/7 Emergency Service</span>
-          </div>
-        </div>
-      </div>
       <nav className="navbar">
         <div className="container navbar-content">
-          <a href="#home" className="logo">
-            {/* Use image from assets */}
-            <div className="logo-icon">
-              <img src={logoImg} alt="North Central Engineering Logo" className="w-full h-full object-contain" />
+          {/* Logo */}
+          <a href="#" className="logo">
+            <div className="logo-image-container">
+              <img src="/NCE.png" alt="North Central Engineering Logo" className="logo-image" />
             </div>
             <div className="logo-text">
               <span className="logo-name">North Central</span>
-              <span className="logo-tagline">Engineering</span>
+              <span className="logo-name">Engineering</span>
             </div>
           </a>
 
+          {/* Menu toggle for mobile */}
           <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? "✕" : "☰"}
           </button>
 
+          {/* Nav links */}
           <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
             <li>
               <a href="#home">Home</a>
@@ -55,11 +46,14 @@ export default function Navbar() {
             </li>
           </ul>
 
+          {/* Get Free Quote Button */}
           <div className="nav-cta">
-            <div className="emergency-number">
-              <span className="emergency-label">Emergency</span>
-              <span className="emergency-phone">077-123-4567</span>
-            </div>
+            <a
+              href="#contact"
+              className="btn-primary"
+            >
+              Get Free Quote
+            </a>
           </div>
         </div>
       </nav>

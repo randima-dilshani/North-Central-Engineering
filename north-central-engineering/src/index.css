@@ -10,6 +10,185 @@
   box-sizing: border-box;
 }
 
+/* Gradient White Links */
+.navbar .nav-links a {
+  font-weight: 600;
+  position: relative;
+
+  /* Gradient text */
+  background: linear-gradient(
+    90deg,
+    #ffffff,     /* pure white */
+    #f5a623      /* soft yellow highlight */
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  transition: all 0.4s ease;
+}
+
+/* Animate gradient on hover */
+.navbar .nav-links a:hover {
+  animation: whiteGradientShift 2s linear infinite;
+}
+
+/* Optional underline with same gradient */
+.navbar .nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #f5a623
+  );
+  transition: width 0.4s ease;
+}
+
+.navbar .nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Gradient animation keyframes */
+@keyframes whiteGradientShift {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Animation keyframes */
+@keyframes yellowGradient {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+
+
+
+
+.navbar .logo-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+
+  /* Gradient text - matching dark-blue + yellow theme */
+  background: linear-gradient(
+    270deg,
+    #f5a623,  /* yellow */
+    #e09515,  /* darker yellow/orange */
+    #38bdf8,  /* light blue/teal for contrast */
+    #facc15   /* soft bright yellow */
+  );
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  /* Glow effect */
+  text-shadow: 0 2px 10px rgba(245, 166, 35, 0.45);
+
+  /* Smooth gradient animation */
+  animation: companyGradientShift 10s ease infinite;
+
+  /* Keep in one line */
+  white-space: nowrap;
+}
+
+
+@keyframes goldGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.navbar .logo-tagline {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+/* Glass + Glow Navbar Effect */
+/* .navbar {
+  background: rgba(255, 255, 255, 0.75); 
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+  box-shadow:
+    0 8px 30px rgba(10, 22, 40, 0.12),
+    0 0 25px rgba(245, 166, 35, 0.25); 
+} */
+
+/* Navbar color override for white background */
+.navbar .logo-name {
+  color: var(--dark-blue);
+}
+
+.navbar .nav-links a {
+  color: var(--text-dark);
+}
+
+.navbar .nav-links a:hover {
+  color: var(--yellow);
+}
+
+.navbar .menu-toggle {
+  color: var(--dark-blue);
+}
+
+.navbar .emergency-label {
+  color: #666;
+}
+
+.navbar .emergency-phone {
+  color: var(--dark-blue);
+}
+
+/* Navbar CTA Button – balanced curve */
+.nav-cta .btn-primary {
+  padding: 11px 24px;        /* comfortable size */
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  border-radius: 10px;       /* NOT pill – clean modern curve */
+  
+  background: linear-gradient(
+    90deg,
+    #f5a623,
+    #facc15
+  );
+  color: #0a1628;
+
+  box-shadow: 0 5px 16px rgba(245, 166, 35, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.nav-cta .btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(245, 166, 35, 0.4);
+}
+
+
+
 :root {
   --dark-blue: #0a1628;
   --dark-blue-light: #0f1f35;
@@ -170,20 +349,29 @@ ul {
   gap: 12px;
 }
 
-.logo-icon {
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(135deg, var(--yellow), var(--yellow-hover));
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--dark-blue);
+.logo-image-container {
+  /* Reduced logo size from 65px to 45px */
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--white);
+  padding: 2px;
+  box-shadow: 0 0 15px rgba(245, 166, 35, 0.5), 0 0 25px rgba(245, 166, 35, 0.2);
+  transition: all 0.3s ease;
 }
 
-.logo-icon svg {
-  width: 28px;
-  height: 28px;
+
+.logo-image-container:hover {
+  box-shadow: 0 0 20px rgba(245, 166, 35, 0.7), 0 0 35px rgba(245, 166, 35, 0.3);
+  transform: scale(1.05);
+}
+
+.logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .logo-text {
@@ -301,6 +489,14 @@ ul {
   max-width: 700px;
 }
 
+.hero-content {
+  margin-left: 250px;         /* reset */
+}
+
+.hero-text {
+  margin-left: -40px;      /* 👈 slight left shift */
+}
+
 .hero-subtitle {
   display: inline-block;
   color: var(--yellow);
@@ -336,6 +532,88 @@ ul {
   gap: 16px;
   flex-wrap: wrap;
 }
+
+/* Hero animation base */
+.hero-text > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* Staggered animation */
+.hero-subtitle {
+  animation-delay: 0.2s;
+}
+
+.hero-title {
+  animation-delay: 0.4s;
+}
+
+.hero-description {
+  animation-delay: 0.6s;
+}
+
+.hero-buttons {
+  animation-delay: 0.8s;
+}
+
+/* Fade + slide up */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title .highlight {
+  position: relative;
+  display: inline-block;
+  animation: highlightGlow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes highlightGlow {
+  from {
+    text-shadow: 0 0 0 rgba(245, 166, 35, 0);
+  }
+  to {
+    text-shadow: 0 0 12px rgba(245, 166, 35, 0.6);
+  }
+}
+
+.hero-buttons button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-buttons button:hover {
+  transform: translateY(-2px);
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-side-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  padding: 28px;
+  border-radius: 14px;
+  max-width: 320px;
+  color: #fff;
+}
+
+.hero-side-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-side-card li {
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+
 
 /* About Styles - White background */
 .about {

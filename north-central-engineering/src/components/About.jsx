@@ -54,7 +54,7 @@ export default function About() {
           <div className="about-images">
             <div className="about-image-main">
               <img
-                src="/image3.png"
+                src="/image12.jpeg"
                 alt="Engineer Installing Fire Alarm System"
               />
             </div>
@@ -66,7 +66,7 @@ export default function About() {
 
           <div className="about-content">
             <span className="section-subtitle">About North Central Engineering</span>
-            <h2 className="section-title">Your Trusted Fire Safety Solutions Partner</h2>
+            <h2 className="section-title">We Are Always Ready To Protect Your Property</h2>
             <p className="about-description">
               North Central Engineering is a leading provider of fire safety systems and security solutions in Sri
               Lanka. With over 15 years of experience, we specialize in designing, installing, and maintaining advanced
