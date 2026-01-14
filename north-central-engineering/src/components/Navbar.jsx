@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-import logoImg from "../assets/NCE LOGO.jpg" // adjust path based on file location
+
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
