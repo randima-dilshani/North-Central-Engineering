@@ -118,6 +118,8 @@
   color: var(--gray);
 }
 
+
+
 @media (max-width: 968px) {
   .about-grid {
     grid-template-columns: 1fr;

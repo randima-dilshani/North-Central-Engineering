@@ -16,21 +16,21 @@ export default function Contact() {
                 <div className="contact-icon">📍</div>
                 <div className="contact-text">
                   <h4>Our Location</h4>
-                  <p>North Central Province, Sri Lanka</p>
+                  <p>No 593/2 C, Bulugaha Junction, Kelaniya, Sri Lanka</p>
                 </div>
               </div>
               <div className="contact-item">
                 <div className="contact-icon">📞</div>
                 <div className="contact-text">
                   <h4>Phone Number</h4>
-                  <p>+94 77 123 4567</p>
+                  <p>+94 77 769 3389</p>
                 </div>
               </div>
               <div className="contact-item">
                 <div className="contact-icon">📧</div>
                 <div className="contact-text">
                   <h4>Email Address</h4>
-                  <p>info@northcentraleng.lk</p>
+                  <p>ncefire.projects@gmail.com</p>
                 </div>
               </div>
               <div className="contact-item">
@@ -61,12 +61,14 @@ export default function Contact() {
                 <div className="form-group">
                   <select required>
                     <option value="">Select Service</option>
-                    <option value="fire-alarm">Fire Alarm Systems</option>
-                    <option value="cctv">CCTV & Surveillance</option>
-                    <option value="access">Access Control</option>
-                    <option value="pa">PA & Voice Alarm</option>
-                    <option value="suppression">Fire Suppression</option>
-                    <option value="integration">System Integration</option>
+                    <option value="fire-alarm">Fire Extinguisherss</option>
+                    <option value="cctv">Fire Detection & Alarm</option>
+                    <option value="access">Clean Agent & Special Suppression</option>
+                    <option value="pa">Fire Pump Rooms & Electrical</option>
+                    <option value="suppression">Hydrant, Hose Reel & Sprinkler Systems</option>
+                    <option value="integration">Compliance Audits & Training</option>
+                    <option value="integration">Spares & Rapid Replacement</option>
+                    <option value="integration">Hydrant, Hose Reel & Sprinkler Systems</option>
                   </select>
                 </div>
               </div>

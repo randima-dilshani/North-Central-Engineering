@@ -2,26 +2,26 @@ export default function WhyChooseUs() {
   const steps = [
     {
       number: "01",
-      title: "Free Site Assessment",
+      title: "Certified, Reliable Equipment",
       description:
-        "Our engineers visit your property to assess fire safety requirements and provide expert recommendations.",
+        "Trusted, compliant brands that meet regulations and pass inspections with confidence.",
     },
     {
       number: "02",
-      title: "Custom System Design",
+      title: "End-to-End Project Delivery",
       description:
-        "We design a tailored fire safety system that meets your specific needs and regulatory requirements.",
+        "A single partner for surveying, design, supply, installation, testing, and ongoing maintenance.",
     },
     {
       number: "03",
-      title: "Professional Installation",
+      title: "Inspection-Ready Handovers",
       description:
-        "Our certified technicians install and configure your system with minimal disruption to your operations.",
+        "Complete documentation, test reports, tagging, and clear labeling for smooth audits.",
     },
     {
       number: "04",
-      title: "Training & Support",
-      description: "We provide comprehensive training and ongoing maintenance to keep your systems running optimally.",
+      title: "Fast, Accountable Support",
+      description: "Direct communication, rapid response, and minimal downtime you can rely on.",
     },
   ]
 
@@ -31,7 +31,7 @@ export default function WhyChooseUs() {
         <div className="why-left">
           <div className="why-content">
             <span className="section-subtitle-dark">How We Work</span>
-            <h2 className="section-title-dark">Our Installation Process</h2>
+            <h2 className="section-title-dark">Making Fire Safety Simple & Effective</h2>
             <p className="why-description-dark">
               We follow a proven process to ensure your property gets the best fire safety protection. From initial
               assessment to ongoing maintenance, we're with you every step of the way.
@@ -64,7 +64,7 @@ export default function WhyChooseUs() {
           <div
             className="why-bg-image"
             style={{
-              backgroundImage: `url('/image5.png')`,
+              backgroundImage: `url('/image14.png')`,
             }}
           ></div>
           <div className="why-cta-box">

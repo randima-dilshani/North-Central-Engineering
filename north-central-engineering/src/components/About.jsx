@@ -1,4 +1,47 @@
+import { useEffect, useRef } from "react";
+
 export default function About() {
+
+const aboutRef = useRef(null);
+const hasAnimated = useRef(false);
+
+useEffect(() => {
+  const counter = document.querySelector(".exp-number");
+  if (!counter) return;
+
+  const target = +counter.getAttribute("data-target");
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting && !hasAnimated.current) {
+        hasAnimated.current = true;
+        let current = 0;
+        const increment = Math.ceil(target / 60);
+
+        const updateCounter = () => {
+          current += increment;
+          if (current >= target) {
+            counter.innerText = `${target}+`;
+          } else {
+            counter.innerText = current;
+            requestAnimationFrame(updateCounter);
+          }
+        };
+
+        updateCounter();
+      }
+    },
+    {
+      threshold: 0.5, // 👈 starts when 50% visible
+    }
+  );
+
+  observer.observe(aboutRef.current);
+
+  return () => observer.disconnect();
+}, []);
+
+
   const services = [
     {
       icon: (
@@ -48,7 +91,7 @@ export default function About() {
   ]
 
   return (
-    <section id="about" className="about">
+    <section id="about" className="about" ref={aboutRef}>
       <div className="container">
         <div className="about-grid">
           <div className="about-images">
@@ -59,7 +102,7 @@ export default function About() {
               />
             </div>
             <div className="about-experience">
-              <span className="exp-number">500+</span>
+              <span className="exp-number" data-target="500">0</span>
               <span className="exp-text">Projects Completed</span>
             </div>
           </div>
@@ -67,13 +110,11 @@ export default function About() {
           <div className="about-content">
             <span className="section-subtitle">About North Central Engineering</span>
             <h2 className="section-title">We Are Always Ready To Protect Your Property</h2>
-            <p className="about-description">
-              North Central Engineering is a leading provider of fire safety systems and security solutions in Sri
-              Lanka. With over 15 years of experience, we specialize in designing, installing, and maintaining advanced
-              fire alarm systems, CCTV surveillance, access control systems, and fire suppression equipment for
-              residential, commercial, and industrial properties.
-            </p>
-
+          <p className="about-description">
+  North Central Engineering (NCE) is a trusted fire safety partner in Sri Lanka, delivering certified equipment and
+  code-compliant fire protection systems for residential, commercial, and industrial sites. We design, supply,
+  install, and maintain complete solutions from fire alarms and sprinklers to hydrants, hose reels, and pump rooms.
+</p>
             <div className="about-services">
               {services.map((service, index) => (
                 <div key={index} className="about-service-item">

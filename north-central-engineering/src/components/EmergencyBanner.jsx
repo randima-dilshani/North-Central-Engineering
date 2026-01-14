@@ -5,8 +5,8 @@ export default function EmergencyBanner() {
         <div className="container">
           <div className="emergency-content">
             <span className="emergency-label">Contact Us For Sales & Support</span>
-            <h2 className="emergency-number-large">+94 77 123 4567</h2>
-            <p className="emergency-email">info@northcentraleng.lk</p>
+            <h2 className="emergency-number-large">+94 77 769 3389</h2>
+            <p className="emergency-email">ncefire.projects@gmail.com</p>
           </div>
         </div>
       </div>
