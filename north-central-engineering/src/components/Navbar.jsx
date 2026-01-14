@@ -1,4 +1,6 @@
-import { useState } from "react"
+import { Link } from "react-router-dom";
+import { useState } from "react";
+
 import logoImg from "../assets/NCE LOGO.jpg" // adjust path based on file location
 
 export default function Navbar() {
@@ -25,26 +27,30 @@ export default function Navbar() {
           </button>
 
           {/* Nav links */}
-          <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#why-us">Why Us</a>
-            </li>
-            <li>
-              <a href="#testimonials">Testimonials</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
+       <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
+  <li>
+    <Link to="/#home" onClick={() => setIsMenuOpen(false)}>Home</Link>
+  </li>
+  <li>
+    <Link to="/#about" onClick={() => setIsMenuOpen(false)}>About</Link>
+  </li>
+  <li>
+    <Link to="/#why-us" onClick={() => setIsMenuOpen(false)}>Why Us</Link>
+  </li>
+  <li>
+    <Link to="/#services" onClick={() => setIsMenuOpen(false)}>Services</Link>
+  </li>
+  <li>
+    <Link to="/#testimonials" onClick={() => setIsMenuOpen(false)}>Testimonials</Link>
+  </li>
+  <li>
+    <Link to="/itsolutions" onClick={() => setIsMenuOpen(false)}>IT Solutions</Link>
+  </li>
+  <li>
+    <Link to="/#contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+  </li>
+</ul>
+
 
           {/* Get Free Quote Button */}
           <div className="nav-cta">

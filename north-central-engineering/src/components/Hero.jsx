@@ -9,10 +9,11 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
 export default function Hero() {
+  
 
   return (
     <>
-      <Navbar />
+    
     <section id="home" className="hero">
     
       <div

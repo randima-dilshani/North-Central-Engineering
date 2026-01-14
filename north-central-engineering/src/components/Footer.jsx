@@ -1,3 +1,6 @@
+
+import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -57,20 +60,24 @@ export default function Footer() {
                 Leading provider of fire alarm systems and security solutions in Sri Lanka. Protecting lives and
                 property with cutting-edge technology and expert service.
               </p>
-              <div className="footer-social">
-                <a href="#" className="social-link">
-                  FB
-                </a>
-                <a href="#" className="social-link">
-                  TW
-                </a>
-                <a href="#" className="social-link">
-                  LI
-                </a>
-                <a href="#" className="social-link">
-                  IG
-                </a>
-              </div>
+            <div className="footer-social">
+  <a href="https://www.facebook.com/share/1BpG2xgh2k/" className="social-link" aria-label="Facebook">
+    <Facebook size={18} />
+  </a>
+
+  <a href="#" className="social-link" aria-label="Twitter">
+    <Twitter size={18} />
+  </a>
+
+  <a href="#" className="social-link" aria-label="LinkedIn">
+    <Linkedin size={18} />
+  </a>
+
+  <a href="#" className="social-link" aria-label="Instagram">
+    <Instagram size={18} />
+  </a>
+</div>
+
             </div>
 
             <div className="footer-links">
@@ -95,16 +102,16 @@ export default function Footer() {
               <h4>Our Services</h4>
               <ul>
                 <li>
-                  <a href="#">Fire Alarm Systems</a>
+                  <a href="#">Fire Extinguishers</a>
                 </li>
                 <li>
-                  <a href="#">CCTV Surveillance</a>
+                  <a href="#">Fire Detection & Alarm</a>
                 </li>
                 <li>
-                  <a href="#">Access Control</a>
+                  <a href="#">Fire Pump Rooms & Electrical</a>
                 </li>
                 <li>
-                  <a href="#">Fire Suppression</a>
+                  <a href="#">Spares & Rapid Replacement</a>
                 </li>
               </ul>
             </div>
