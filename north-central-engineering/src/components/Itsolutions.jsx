@@ -112,8 +112,6 @@ export default function Page() {
       
     <div className="min-h-screen bg-[#0a1628] text-[#f8fafc]">
      
-      
-
       {/* Hero Section - Updated with animations and hero image */}
       <section className="relative min-h-screen flex items-center">
         {/* Background Image */}

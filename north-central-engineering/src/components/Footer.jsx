@@ -50,11 +50,7 @@ export default function Footer() {
     <span className="logo-name">North Central</span>
     <span className="logo-tagline">Engineering</span>
   </div>
-</div>
-
-
-
-               
+</div>    
               </div>
               <p className="footer-description">
                 Leading provider of fire alarm systems and security solutions in Sri Lanka. Protecting lives and
